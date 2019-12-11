@@ -1,0 +1,12 @@
+[package]
+name = "k_means"
+version = "0.1.0"
+authors = ["LukeMathWalker"]
+edition = "2018"
+workspace = ".."
+
+[dependencies]
+ndarray = {version = "0.13"}
+ndarray-stats = "0.3"
+ndarray-rand = "0.11"
+rand = "0.7"

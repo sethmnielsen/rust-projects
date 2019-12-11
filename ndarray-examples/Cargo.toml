@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "./",
+  "linear_regression",
+  "k_means",
+]
