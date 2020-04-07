@@ -1,12 +1,14 @@
-extern crate ndarray;
-
-use ndarray::Array;
-use ndarray::{arr3, Axis};
-use std::iter::FromIterator;
-
 fn main() {
-    let a = Array::from_iter(0..28).into_shape((2, 7, 2)).unwrap();
-    let mut iter = a.axis_chunks_iter(Axis(1), 2);
-
-    // println!("{:?}", iter);
+    let haystack = [1,1,2,5,14,42,132,429,1430,4862];
+    
+    for reference in haystack.iter() {
+        let item = *reference;
+        
+        let result = match item {
+            42 | 132 => "hit!",
+                   _ => "miss",
+        };
+        
+        println!("{}: {}", item, result);
+    }
 }
